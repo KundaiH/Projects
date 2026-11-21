@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Student Management System</h1>
+
+    <h2>Register Students</h2>
+
+    <form action="" id="student-form">
+        <input 
+            type="number"
+            id="student-id"
+            placeholder="Student ID"
+            required
+        >
+        <input 
+            type="text"
+            id="student-name"
+            placeholder="Student Name"
+            required
+        >
+        <input 
+            type="text"
+            id="student-course"
+            placeholder="Course"
+            required
+        >
+        <input 
+            type="number"
+            id="student-marks"
+            placeholder="Marks"
+            min="0"
+            max="100"
+            required
+        >
+
+        <button type="submit" id="submit-btn">Add Student</button>
+        <button type="button" id="cancel-edit-btn" style="display: none;" onclick="cancelEdit()">
+            Cancel Edit
+        </button>
+
+    </form>
+
+    <h2>Search and Filter Students</h2>
+
+    <input 
+        type="text"
+        id="search-input"
+        placeholder="Search student by name..."
+    >
+
+    <select name="" id="course-filter">
+        <option value="">All Courses</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Business Management">Business Management</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Accounting">Accounting</option>
+    </select>
+
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="student-list">
+            <!-- student records will appear  here -->
+
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
